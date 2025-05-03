@@ -1,12 +1,14 @@
+"use client"
 import React from 'react'
 import { Button, buttonVariants } from '../ui/button'
 import Link from 'next/link'
 import {RegisterLink, LoginLink, LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs';
 
-const Navbar = async() => {
-  const {getUser} = getKindeServerSession()
-  const user = await getUser()
+const Navbar = () => {
+  const {getUser} = useKindeBrowserClient()
+  const user =  getUser()
   return (
     <nav>
         <div className="flex w-full items-center justify-between p-4 bg-zinc-800 text-white lg:mt-3 lg:rounded-md rounded-none lg:mx-auto text-lg lg:w-[1040px] md:w-full sm:p-4">

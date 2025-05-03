@@ -30,7 +30,7 @@ const IDpage = async ({params}:{params:Params}) => {
             <h1 className='text-3xl font-bold text-left'>{data?.title}</h1>
             <div className='flex items-center mb-10 gap-5 mt-5'>
                 <div className=' w-10 h-10 relative rounded-full overflow-hidden'>
-                <Image src={data.authorImage} alt={data.authorName} fill/>
+                <Image src={data.authorImage} alt={data.authorName} fill unoptimized/>
                 </div>
                 <h2 className='text-xl font-bold'>{data.authorName}</h2>
                 <p className='text-md text-gray-500'>{new Date(data.createdAt).toLocaleDateString()}</p>

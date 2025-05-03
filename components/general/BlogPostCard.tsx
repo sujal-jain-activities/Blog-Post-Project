@@ -30,7 +30,7 @@ const BlogPostCard = ({data}:IappProps) => {
                 </h3>
                 <p className='text-sm text-gray-400 mt-2 line-clamp-3'>{data.content}</p>
                 <div className='flex items-center justify-between mt-4'>
-                    <div className='flex ite-center space-x-2'>
+                    <div className='flex item-center space-x-2'>
                         <div className='relative w-8 h-8 rounded-full overflow-hidden'>
                             <Image src={data.authorImage} alt='Author Image'  width={32} height={32} unoptimized className='object-cover'/>
                         </div>

@@ -17,7 +17,11 @@ const nextConfig: NextConfig = {
         hostname: "framerusercontent.com",
         protocol: "https",
         port: "",
-      }
+      },
+      {
+        protocol: "https",
+        hostname: "gravatar.com",
+      },
     ]
   }
 };
